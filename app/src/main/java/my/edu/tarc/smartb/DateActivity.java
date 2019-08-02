@@ -139,7 +139,6 @@ public class DateActivity extends AppCompatActivity {
             starttime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Calendar mcurrentTime = Calendar.getInstance();
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -147,6 +146,7 @@ public class DateActivity extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(DateActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+
                         starttime.setText(String.format("%02d:%02d", selectedHour,selectedMinute) );
                     }
                 }, hour, minute, true);//Yes 24 hour time
@@ -158,7 +158,6 @@ public class DateActivity extends AppCompatActivity {
         endtime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Calendar mcurrentTime = Calendar.getInstance();
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -305,7 +304,7 @@ public class DateActivity extends AppCompatActivity {
     public void setDate(View view)
     {
         showDialog(999);
-        Toast.makeText(getApplicationContext(),"ca", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"ca", Toast.LENGTH_SHORT).show();
     }
 
     @Override

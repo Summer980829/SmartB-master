@@ -2,6 +2,8 @@ package my.edu.tarc.smartb;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,13 +39,22 @@ public class BookingAdapter extends ArrayAdapter<BookingList> {
         sportType = rowView.findViewById(R.id.sportType);
         courtNo = rowView.findViewById(R.id.courtNo);
 
-        studID.setText("Student ID" + ": " + bookingList.getStudID());
-        bookingDate.setText("Date" + ": " +bookingList.getDate());
-        startTime.setText("Start time" + ": " +bookingList.getStartTime());
-        endTime.setText("End time" + ": " +bookingList.getEndTime());
-        venue.setText("Venue" + ": " +bookingList.getVenue());
+//        Typeface custom_font = Typeface.createFromAsset(getAssets(), "font/avenirblack.ttf");
+//        Font myFont = new Font("avenir", Font.BOLD ,20);
+
+
+        //studID.setText(Html.fromHtml("<b>" + "Student ID" + ": " + "</b>") + bookingList.getStudID());
+//        String str = "<b>" + bookingList.getStudID() + "</b>";
+//        studID.setText("Student ID" + ": " + Html.fromHtml(str));
+
+
+        studID.setText("Student ID" + ": " +bookingList.getStudID());
+        bookingDate.setText("          Date" + ": " +bookingList.getDate());
+        startTime.setText(" Start time" + ": " +bookingList.getStartTime());
+        endTime.setText("   End time" + ": " +bookingList.getEndTime());
+        venue.setText("       Venue" + ": " +bookingList.getVenue());
         sportType.setText("Sport type" + ": " +bookingList.getSportType());
-        courtNo.setText("Court No"+ ": " +bookingList.getCourtNo());
+        courtNo.setText("  Table No"+ ": " +bookingList.getCourtNo());
 
         return rowView;
     }

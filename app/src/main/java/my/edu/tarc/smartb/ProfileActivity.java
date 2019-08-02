@@ -197,6 +197,7 @@ public class ProfileActivity extends AppCompatActivity {
                 action.findItem(R.id.menu_edit).setVisible(true);
                 action.findItem(R.id.menu_save).setVisible(false);
 
+                //
                 email.setFocusableInTouchMode(false);
                 contactNo.setFocusableInTouchMode(false);
                 email.setFocusable(false);

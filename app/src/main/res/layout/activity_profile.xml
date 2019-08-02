@@ -147,9 +147,12 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
                         android:inputType="none"
                         android:paddingLeft="20dp"
-                        android:textSize="13dp" />
+                        android:textSize="13dp"
+                        android:visibility="visible" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -168,6 +171,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="false"
+                        android:clickable="false"
                         android:inputType="none"
                         android:paddingLeft="20dp"
                         android:textSize="13dp" />
